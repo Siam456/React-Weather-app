@@ -1,0 +1,24 @@
+ componentDidMount(){
+        axios.get(`${api.url1}=${this.state.cityname}${api.url2}=${api.key}`)
+        .then(response=>{
+            console.log(response.data)
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+
+        
+    }
+
+    const api = {
+    key: 'd8fb25d83fd416945983b4e5445ce3c0',
+    url1: 'https://api.openweathermap.org/data/2.5/weather?q',
+    url2: '&units=metric&appid'
+}
+
+
+import React, { Component } from 'react';
+
+
+
+export default Weather;
