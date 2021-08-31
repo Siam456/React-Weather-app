@@ -1,12 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 import Weather from './component/Weather';
-import TestMui from './component/TestMui';
+import { Link ,Switch , Route , BrowserRouter as Router} from 'react-router-dom';
+import About from './component/About'
 
 function App() {
   return (
     <div className="App">
-      <Weather />
+      <Router>
+        <Switch>
+          <Route exact to='/'> <Weather /> </Route>
+          
+        </Switch>
+      </Router>
+      <About></About>
       
     </div>
   );

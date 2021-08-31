@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {Button, TextField, Card ,Typography} from '@material-ui/core'
 import axios from 'axios';
 import { Link  , Route , BrowserRouter as Router} from 'react-router-dom';
-import Wapp from './Wapp';
 
 const api = {
     key: 'd8fb25d83fd416945983b4e5445ce3c0',
@@ -57,11 +56,10 @@ class Weather extends Component {
         return (
             
             <div style={{justifyContent: 'center', marginTop: '0'}}>
-                <Router>
-                    <Button variant='contained' color='primary' style={{position: 'absolute' , right: '20px' , top: '20px'}}><Link to = '/about' style={{ color: 'white' ,textDecoration: 'none'}}>About</Link></Button>
-                    <Route path='/about' component={Wapp}></Route>
-                </Router>
-                <Card style={{marginTop: '50px' , paddingTop: '10px'}}>
+                
+                <h3>Enter city name to show weather details</h3>
+                <Card className='cardMain'>
+                   
                 <form>
                     <TextField id="outlined-basic"  onChange={this.onChangename}  label="Enter Input" variant="outlined" type='text'></TextField>   
                 </form>
